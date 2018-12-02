@@ -1,16 +1,7 @@
 package login;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-import java.sql.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,9 +9,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author hp
+ * @author PushpRajThakur
  */
-public class Login extends HttpServlet {
+public class Swiggy extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,48 +25,17 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) 
-        {
-            /*TODO output your page here.You may use following sample code.*/
-            String username = request.getParameter("username");
-		String password = request.getParameter("Password");
-                try{  
-           Class.forName("com.mysql.jdbc.Driver");
-           Connection conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/database","root","");
-           Statement stmt=conn.createStatement();
-//here sonoo is database name,root is username and password
-  out.println("<!DOCTYPE html>");
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>"+username+"</title>");            
+            out.println("<title>Servlet Swiggy</title>");            
             out.println("</head>");
-            out.println("<body>");  
-ResultSet rs=stmt.executeQuery("select * from student");  
-int flag=0;
-while(rs.next())  {
-if(username.equals(rs.getString(1))&&password.equals(rs.getString(2)))
-{
-RequestDispatcher req = request.getRequestDispatcher("swiggy.html");
-req.forward(request, response);
-   flag=1;
-    break;
-}
-
-}
-if(flag==0)
-{
-    
-RequestDispatcher req = request.getRequestDispatcher("swiggy.html");
-			req.include(request, response);
-    
-}
-
-conn.close();  
-}catch(IOException | ClassNotFoundException | SQLException | ServletException e)
-{
-    System.out.println(e);
-} 
-                
+            out.println("<body>");
+            out.println("<h1>Servlet Swiggy at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
 
