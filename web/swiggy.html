@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    color:orange;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: orange;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: grey;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: black;
+    margin-top: 20px;
+    color:white;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+  }
+    .ab
+    {
+      background-image: url("images/swi.jfif");
+
+    }
+
+</style>
+</head>
+<body class="ab">
+
+<div class="header">
+  <h1><img src="images/swiggy.jpg"></img></h1>
+</div>
+
+<div class="topnav">
+  <a href="http://localhost:8083/Swiggy/swiggy.html">Home</a>
+  <a href="http://localhost:8083/Swiggy/Signup.html">Register</a>
+  <a href="#">MenuCard</a>
+  <a href="http://localhost:8083/Swiggy/add.html">AddRestaurant</a>
+  <a href="http://localhost:8083/Swiggy/index.html" style="float:right">SignIn</a>
+</div>
+<br>
+  <div class="search-container">
+      <a href="#">
+<select>
+  <option value="Agra">Agra </option>  
+  <option value="Allahabad">Allahabad</option>
+  <option value="Bangalore">Bangalore</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Chennai">Chennai</option>
+  <option value=" Delhi"> Delhi </option>
+  <option value="Goa">Goa</option>
+  <option value=" Hyderabad"> Hyderabad </option>
+  <option value="Jaipur">Jaipur </option>
+  <option value="Kolkata">Kolkata </option>
+  <option value="Lucknow">Lucknow </option>
+  <option value="Ludhiyana">Ludhiana</option>
+  <option value="Mumbai"> Mumbai  </option>
+  <option value="Pune">Pune </option>
+</select>
+      </a>
+          
+  
+  </div>
+  <div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Hungry?</h2>
+      <h4>Order food from favourite Restaurant near you.</h4>
+      <div>
+        
+        <img src="images/food.jpg" style="height:200px;width:300px;"></img>
+           <img src="images/f.jpeg" style="height:200px;width:300px;"></img>
+            <img src="images/f.jfif" style="height:200px;width:300px;"></img>
+        </div>
+      <p><b>Find Location</b></p>
+      <p>Agra Ahmedabad Allahabad Amritsar Aurangabad Bangalore Bhopal Bhubaneswar Chandigarh Chennai Coimbatore Dehradun Delhi Faridabad Goa Gurgaon Guwahati Hyderabad Indore Jaipur Jalandhar Kanpur Kochi Kolkata Kota Lucknow Ludhiana Mangaluru Manipal Mumbai Mysore Nagpur Nashik Noida Pondicherry Pune Surat Thiruvananthapuram Thrissur Tirupati Tirupur Trichy Udaipur Vadodara Varanasi Vellore Vijayawada Vizag Warangal.</p>
+    </div>
+    <div class="card" style="background-color: black">
+      <div><img src="images/x.webp" hspace="40" style="height:200px;width:200px";></img>
+      <img src="images/y.webp" hspace="40"style="height:200px;width:200px";></img>
+      <img src="images/z.webp" hspace="40"style="height:200px;width:200px";></img></div>
+    </div>
+    <table style="color: white;background-color: black">
+      <tr>
+        <th>No Minimum Order</th>
+        <th>Live Order Tracking</th>
+        <th>Lightning-Fast Delivery</th>
+      </tr>
+      <tr>
+        <td>
+    
+Order in for yourself or for the group, with no restrictions on order value.</td>
+<td>Know where your order is at all times, from the restaurant to your doorstep.</td>
+<td>Know where your order is at all times, from the restaurant to your doorstep.</td>
+</table>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div>
+        <img src=images/me.jpg style="height:200px;width:200px;"></img>
+      </div>
+      <p>PushpRajThakur</p>
+      <p>Contact : +91 9882955137</p>
+    </div>
+    
+    <div class="card">
+      <h3>Follow Me on</h3>
+      <p><a href="https://www.instagram.com/?hl=en"><img src="images/insta.jfif" style="height: 50px;width: 80px;"></img></a><a href="https://www.facebook.com/PushpRaj81287"><img src="images/face.jfif" style="height: 40px;width: 40px;"></img></a></p>
+    </div>
+  </div>
+</div>
+
+<div class="footer" style="text-align: center;">
+  <h3>CONTACT</h3><br>
+  <h5>Help & Support</h5><br>
+  <h5>About Us</h5><br>
+  
+</div>
+
+</body>
+</html>
